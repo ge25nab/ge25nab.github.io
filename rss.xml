@@ -2,11 +2,11 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title><![CDATA[Xingcheng Zhou | TUM]]></title>
-    <link>https://xingcheng.github.io</link>
+    <link>https://ge25nab.github.io/xingcheng.github.io</link>
     <description><![CDATA[Vision Language Action research for autonomous driving and intelligent infrastructure]]></description>
     <language>en-us</language>
-    <atom:link href="https://xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 01 Nov 2025 13:59:08 GMT</lastBuildDate>
+    <atom:link href="https://ge25nab.github.io/xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Nov 2025 14:08:32 GMT</lastBuildDate>
     <item>
         <title><![CDATA[TUMTraffic VideoQA: A Benchmark for Unified Spatio-Temporal Video Understanding in Traffic Scenes]]></title>
         <link>https://traffix-videoqa.github.io/</link>
