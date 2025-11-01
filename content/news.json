@@ -1,0 +1,51 @@
+[
+  {
+    "date": "May 2025",
+    "content": "One paper accepted by ICML 2025 in Vancouver, Canada!",
+    "links": [
+      {
+        "text": "ICML 2025",
+        "url": "https://icml.cc/"
+      }
+    ]
+  },
+  {
+    "date": "Jul 2024",
+    "content": "One paper accepted by IEEE-ITSC 2024 in Edmonton, Canada!",
+    "links": [
+      {
+        "text": "IEEE-ITSC 2024",
+        "url": "https://www.ieee-itsc2024.org/"
+      }
+    ]
+  },
+  {
+    "date": "May 2024",
+    "content": "One paper accepted by T-IV. One paper accepted by CVPR 2024!",
+    "links": [
+      {
+        "text": "T-IV",
+        "url": "https://ieee-itss.org/pub/t-iv/"
+      },
+      {
+        "text": "CVPR 2024",
+        "url": "https://cvpr.thecvf.com/Conferences/2024"
+      }
+    ]
+  },
+  {
+    "date": "May 2023",
+    "content": "I start my PhD at TUM Chair of Robotics, Artificial Intelligence and Real time Systems!",
+    "links": [
+      {
+        "text": "Chair of Robotics, Artificial Intelligence and Real time Systems",
+        "url": "https://www.ce.cit.tum.de/en/air/home/"
+      }
+    ]
+  },
+  {
+    "date": "Jun 2021",
+    "content": "Completed my M.Sc. thesis \"Real-Time LiDAR-Based 3D Object Detection on the Highway\" at TUM!"
+  }
+]
+

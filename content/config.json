@@ -1,0 +1,37 @@
+{
+  "site": {
+    "title": "Xingcheng Zhou | TUM",
+    "description": "Vision Language Action research for autonomous driving and intelligent infrastructure",
+    "keywords": "autonomous driving, vision language model, world model, trajectory planning, cooperative perception, dataset, TUM"
+  },
+  "author": {
+    "name": "Xingcheng Zhou",
+    "nameWithChinese": "Xingcheng Zhou",
+    "email": "xingcheng.zhou@tum.de",
+    "emailDisplay": "xingcheng[dot]zhou{at}tum[dot]de",
+    "location": "Munich, Germany",
+    "office": "Boltzmannstr. 3, 85748 Garching, Germany"
+  },
+  "links": {
+    "googleScholar": "https://scholar.google.com/citations?user=FPYXLpQAAAAJ",
+    "tumProfile": "https://www.ce.cit.tum.de/air/people/xingcheng-zhou-msc/",
+    "githubPersonal": "https://github.com/ge25nab",
+    "githubOrg": "https://github.com/DriveVLA",
+    "openReview": "https://openreview.net/profile?id=~Xingcheng_Zhou1",
+    "linkedin": "https://www.linkedin.com/in/xingcheng-zhou-64b0a6189"
+  },
+  "profile": {
+    "paragraphs": [
+      "Hi, I am Xingcheng Zhou. I joined the Chair of Robotics, Artificial Intelligence and Real time Systems at Technical University of Munich in 2023 as a Research Assistant, working under the supervision of Prof. Dr. Ing. habil. Alois Christian Knoll.",
+      "My research interests include Vision Language Models, 3D Environment Perception, Scene Understanding, World Models and related areas.",
+      "I completed my M.Sc. in Electrical and Computer Engineering at the Technical University of Munich in 2021. Before starting as Research Assistant at TUM, I worked as an Industrial AI Researcher at Siemens."
+    ],
+    "links": {
+      "chair": "https://www.ce.cit.tum.de/air/",
+      "tum": "https://www.tum.de",
+      "supervisor": "https://www.ce.cit.tum.de/air/people/alois-knoll",
+      "siemens": "https://www.siemens.com"
+    }
+  }
+}
+

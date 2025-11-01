@@ -1,0 +1,36 @@
+{
+  "workshops": [
+    {
+      "title": "DriveX Workshop",
+      "role": "Organizer",
+      "venue": "CVPR and ICCV",
+      "year": "2025",
+      "theme": "Foundation Models for V2X based cooperative autonomous driving",
+      "links": [
+        { "label": "Website", "url": "https://drivex-workshop.github.io/" }
+      ]
+    },
+    {
+      "title": "DDIVA Workshop",
+      "role": "Organizer",
+      "venue": "IEEE Intelligent Vehicles Symposium",
+      "year": "2024",
+      "theme": "Data Driven Intelligent Vehicle Applications",
+      "links": [
+        { "label": "Website", "url": "https://www.ce.cit.tum.de/air/research/ddiva/ddiva24/" }
+      ]
+    }
+  ],
+  "reviewer_or_committee_for": [
+    "CVPR",
+    "ICCV",
+    "AAAI",
+    "ITSC",
+    "IV",
+    "IROS",
+    "RA-L",
+    "TRB",
+    "T-IV"
+  ]
+}
+

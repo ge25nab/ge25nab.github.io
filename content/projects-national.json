@@ -1,0 +1,25 @@
+[
+  {
+    "title": "AutoTech.agil",
+    "timeframe": "May 2023 to Oct 2025",
+    "funder": "German Federal Ministry of Education and Research BMBF",
+    "summary": "Extend a real time traffic digital twin for connected intelligent infrastructure.",
+    "links": [
+      { "label": "TUM Page", "url": "https://www.ce.cit.tum.de/air/research/autotechagil/" }
+    ],
+    "image": "/assets/img/projects/autotech.png",
+    "website": "https://www.autotechagil.de/"
+  },
+  {
+    "title": "Providentia++",
+    "timeframe": "Oct 2020 to Jun 2021",
+    "funder": "Federal Ministry of Transport and Intelligent Infrastructure BMVI",
+    "summary": "Design and implement real time 3D object detection for roadside LiDAR on highways.",
+    "links": [
+      { "label": "Live stream", "url": "https://testfeld-a9.live/kreuzung" }
+    ],
+    "image": "/assets/img/projects/providentia.png",
+    "website": "https://innovation-mobility.com/en/"
+  }
+]
+
