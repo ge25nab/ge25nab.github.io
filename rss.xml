@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title><![CDATA[Xingcheng Zhou | TUM]]></title>
+    <link>https://xingcheng.github.io</link>
+    <description><![CDATA[Vision Language Action research for autonomous driving and intelligent infrastructure]]></description>
+    <language>en-us</language>
+    <atom:link href="https://xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 01 Nov 2025 13:59:08 GMT</lastBuildDate>
+    <item>
+        <title><![CDATA[TUMTraffic VideoQA: A Benchmark for Unified Spatio-Temporal Video Understanding in Traffic Scenes]]></title>
+        <link>https://traffix-videoqa.github.io/</link>
+        <guid>https://traffix-videoqa.github.io/</guid>
+        <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[Xingcheng Zhou, Konstantinos Larintzakis, Hao Guo, Walter Zimmer, Mingyu Liu, Hu Cao, Jiajie Zhang, Venkatnarayanan Lakshminarasimhan, Leah Strand, Alois C Knoll - ICML Poster, 2025]]></description>
+      </item>
+    <item>
+        <title><![CDATA[OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model]]></title>
+        <link>https://arxiv.org/abs/2503.23463</link>
+        <guid>https://arxiv.org/abs/2503.23463</guid>
+        <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+        <description><![CDATA[Xingcheng Zhou, Xuyuan Han, Feng Yang, Yunpu Ma, Alois C Knoll - arXiv, 2025]]></description>
+      </item>
+    <item>
+        <title><![CDATA[Vision Language Models in Autonomous Driving: A Survey and Outlook]]></title>
+        <link>https://ieeexplore.ieee.org/document/10531702</link>
+        <guid>https://ieeexplore.ieee.org/document/10531702</guid>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+        <description><![CDATA[Xingcheng Zhou, Mingyu Liu, Ekim Yurtsever, Bare Luka Zagar, Walter Zimmer, Hu Cao, Alois C Knoll - T-IV, 2024]]></description>
+      </item>
+    <item>
+        <title><![CDATA[WARM-3D: A Weakly-Supervised Sim2Real Domain Adaptation Framework for Roadside Monocular 3D Object Detection]]></title>
+        <link>https://ieeexplore.ieee.org/document/10919929</link>
+        <guid>https://ieeexplore.ieee.org/document/10919929</guid>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+        <description><![CDATA[Xingcheng Zhou*, Deyu Fu*, Walter Zimmer, Hao Guo, Hu Cao, Alois C Knoll - ITSC, 2024]]></description>
+      </item>
+  </channel>
+</rss>
