@@ -21,10 +21,10 @@ export function PublicationCard({ publication }: { publication: Publication }) {
 
   return (
     <div className="mb-6 pb-6 border-b last:border-0">
-      <div className="grid gap-6 md:grid-cols-[360px_1fr]">
+      <div className="grid gap-6 md:grid-cols-[432px_1fr]">
         {/* Publication Image */}
         {publication.image && (
-          <div className="w-full rounded-lg overflow-hidden bg-background flex-shrink-0 max-h-[480px] flex items-center justify-center">
+          <div className="w-full rounded-lg overflow-hidden bg-background flex-shrink-0 max-h-[576px] flex items-center justify-center">
             <img
               src={publication.image ? assetPath(publication.image) : ''}
               alt={publication.title}
