@@ -38,7 +38,22 @@ export function ClustrMapsWidget() {
     script.async = true
     script.defer = true
 
+    // Handle script load events
+    script.onload = () => {
+      // Script loaded successfully
+      console.log('ClustrMaps globe.js loaded')
+    }
+    
+    script.onerror = () => {
+      console.error('Failed to load ClustrMaps globe.js')
+      // Show error message if script fails to load
+      if (container) {
+        container.innerHTML = '<div class="text-sm text-muted-foreground text-center py-4">Failed to load visitor map. Please refresh the page.</div>'
+      }
+    }
+
     // Append script to container so globe renders inside it
+    // ClustrMaps globe.js will create the iframe/div at the script location
     container.appendChild(script)
 
     return () => {
@@ -58,10 +73,10 @@ export function ClustrMapsWidget() {
         {/* ClustrMaps container */}
         <div 
           id="clustrmaps-container" 
-          className="min-h-[300px] bg-muted/30 rounded-lg flex items-center justify-center"
+          className="min-h-[300px] bg-muted/30 rounded-lg"
         >
           {/* ClustrMaps map will be injected here by the script */}
-          <div className="text-sm text-muted-foreground">Loading visitor map...</div>
+          <div className="text-sm text-muted-foreground text-center py-4">Loading visitor map...</div>
         </div>
 
         {/* Visitor map powered by ClustrMaps */}
