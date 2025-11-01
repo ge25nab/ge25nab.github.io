@@ -6,7 +6,7 @@ export default function AcademicServicePage() {
   const service = getServiceReviewer()
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="container mx-auto px-3 py-12">
       <h1 className="mb-8 text-4xl font-bold">Academic Service</h1>
       
       {/* Workshops Section */}

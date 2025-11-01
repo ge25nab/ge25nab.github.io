@@ -6,7 +6,7 @@ import { AcademicServiceSection } from '@/components/academic-service-section'
 
 export default function Home() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-3 py-8">
       <ProfileSection />
       <NewsSection />
       <PublicationsPreview />
