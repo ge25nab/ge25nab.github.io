@@ -33,14 +33,22 @@ export function NationalProjectsSection() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@graph': projects.map((project: NationalProject) => {
-              const [startMonth, startYear] = project.timeframe.split(' ')[0] === 'May' ? ['05', '2023'] : ['10', '2020']
-              const [endMonth, endYear] = project.timeframe.includes('Oct') ? ['10', '2025'] : ['06', '2021']
+              // Parse timeframe - default to safe values if parsing fails
+              let startDate = '2023-05'
+              let endDate = '2025-10'
+              
+              if (project.timeframe) {
+                const [startMonth, startYear] = project.timeframe.split(' ')[0] === 'May' ? ['05', '2023'] : ['10', '2020']
+                const [endMonth, endYear] = project.timeframe.includes('Oct') ? ['10', '2025'] : ['06', '2021']
+                startDate = `${startYear}-${startMonth}`
+                endDate = `${endYear}-${endMonth}`
+              }
               
               return {
                 '@type': 'Project',
                 name: project.title,
-                startDate: `${startYear}-${startMonth}`,
-                endDate: `${endYear}-${endMonth}`,
+                startDate,
+                endDate,
                 funder: {
                   '@type': 'Organization',
                   name: project.funder

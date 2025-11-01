@@ -23,9 +23,6 @@ export default function AcademicServicePage() {
       <section>
         <h2 className="mb-4 text-2xl font-bold">Reviewer</h2>
         <div className="space-y-2">
-          <p className="text-sm text-muted-foreground mb-4">
-            Reviewer or committee member for:
-          </p>
           <div className="flex flex-wrap gap-2">
             {service.reviewer_or_committee_for.map((venue, index) => (
               <span key={index} className="text-sm px-3 py-1 rounded border bg-muted">

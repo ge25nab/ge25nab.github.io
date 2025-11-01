@@ -41,15 +41,17 @@ export function SocialLinks() {
       >
         <Building2 className="h-6 w-6" />
       </Link>
-      <Link
-        href={siteConfig.links.linkedin}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-2xl text-foreground hover:text-primary transition-colors"
-        aria-label="LinkedIn"
-      >
-        <Linkedin className="h-6 w-6" />
-      </Link>
+      {siteConfig.links.linkedin && (
+        <Link
+          href={siteConfig.links.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-2xl text-foreground hover:text-primary transition-colors"
+          aria-label="LinkedIn"
+        >
+          <Linkedin className="h-6 w-6" />
+        </Link>
+      )}
     </div>
   )
 }

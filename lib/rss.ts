@@ -11,12 +11,21 @@ export function generateRSS() {
   const items = publications
     .slice(0, 10)
     .map((pub) => {
-      const pubUrl = pub.links.arxiv
-        ? pub.links.arxiv
-        : pub.links.project
-        ? pub.links.project
-        : pub.links.code
-        ? pub.links.code
+      // Find the first available link (case-insensitive search)
+      const linkKeys = Object.keys(pub.links || {})
+      const arxivLink = linkKeys.find(k => k.toLowerCase() === 'arxiv' || k.toLowerCase() === 'paper')
+      const projectLink = linkKeys.find(k => k.toLowerCase() === 'project')
+      const codeLink = linkKeys.find(k => k.toLowerCase() === 'code' || k.toLowerCase() === 'github')
+      const firstLink = linkKeys.find(k => pub.links[k])
+      
+      const pubUrl = arxivLink && pub.links[arxivLink]
+        ? pub.links[arxivLink]
+        : projectLink && pub.links[projectLink]
+        ? pub.links[projectLink]
+        : codeLink && pub.links[codeLink]
+        ? pub.links[codeLink]
+        : firstLink && pub.links[firstLink]
+        ? pub.links[firstLink]
         : `${siteUrl}/publications#${pub.id}`
       const pubDate = new Date(pub.year, 0, 1).toUTCString()
 
