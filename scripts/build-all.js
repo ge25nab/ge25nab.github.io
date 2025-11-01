@@ -3,7 +3,7 @@
 /**
  * Build script for both GitHub Pages and Custom Domain versions
  * This script builds two versions:
- * 1. GitHub Pages version (basePath: '/xingcheng.github.io')
+ * 1. GitHub Pages version (basePath: '/ge25nab.github.io')
  * 2. Custom Domain version (basePath: '')
  */
 
@@ -77,8 +77,8 @@ function build(env, targetDir) {
 build(
   {
     GITHUB_PAGES: 'true',
-    NEXT_PUBLIC_BASE_URL: 'https://ge25nab.github.io/xingcheng.github.io',
-    NEXT_PUBLIC_BASE_PATH: '/xingcheng.github.io',
+    NEXT_PUBLIC_BASE_URL: 'https://ge25nab.github.io/ge25nab.github.io',
+    NEXT_PUBLIC_BASE_PATH: '/ge25nab.github.io',
     MODE: 'GitHub Pages',
   },
   outGitHubPages

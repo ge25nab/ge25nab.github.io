@@ -3,7 +3,7 @@
 ## 双域名部署说明
 
 此项目支持同时部署到两个域名：
-- **GitHub Pages**: `https://ge25nab.github.io/xingcheng.github.io/`
+- **GitHub Pages**: `https://ge25nab.github.io/ge25nab.github.io/`
 - **自定义域名**: `https://xingcheng-zhou.com/`
 
 ## 快速构建
@@ -17,7 +17,7 @@ npm run build:all
 ```
 
 这会生成两个目录：
-- `out-gh-pages/` - GitHub Pages 版本（basePath: '/xingcheng.github.io'）
+- `out-gh-pages/` - GitHub Pages 版本（basePath: '/ge25nab.github.io'）
 - `out-custom-domain/` - 自定义域名版本（basePath: ''）
 
 ### 单独构建
@@ -60,7 +60,7 @@ GITHUB_PAGES=true npm run build
 
 确认 `out/index.html` 中的资源路径：
 - ✅ 正确：`href="/_next/static/css/..."` （无前缀）
-- ❌ 错误：`href="/xingcheng.github.io/_next/static/css/..."` （有前缀）
+- ❌ 错误：`href="/ge25nab.github.io/_next/static/css/..."` （有前缀）
 
 ### ✅ 3. 部署步骤
 
@@ -83,7 +83,7 @@ GITHUB_PAGES=true npm run build
    - 将 `out/` 或 `out-custom-domain/` 目录的所有内容上传到您的服务器根目录
    - 确保所有文件都已正确上传
 
-#### 对于 GitHub Pages (ge25nab.github.io/xingcheng.github.io)：
+#### 对于 GitHub Pages (ge25nab.github.io/ge25nab.github.io)：
 
 1. **构建（通过 GitHub Actions 自动构建）：**
    - GitHub Actions 会自动构建并部署
@@ -91,9 +91,9 @@ GITHUB_PAGES=true npm run build
 
 2. **检查构建输出：**
    - 确认 `out/` 或 `out-gh-pages/` 目录中的文件路径正确
-   - CSS 路径：`/xingcheng.github.io/_next/static/css/...`（有前缀）
-   - JS 路径：`/xingcheng.github.io/_next/static/chunks/...`（有前缀）
-   - 图片路径：`/xingcheng.github.io/assets/img/...`（有前缀）
+   - CSS 路径：`/ge25nab.github.io/_next/static/css/...`（有前缀）
+   - JS 路径：`/ge25nab.github.io/_next/static/chunks/...`（有前缀）
+   - 图片路径：`/ge25nab.github.io/assets/img/...`（有前缀）
 
 4. **清除缓存：**
    - 清除浏览器缓存（Ctrl+Shift+R 或 Cmd+Shift+R）
@@ -122,7 +122,7 @@ GITHUB_PAGES=true npm run build
 #### 问题：图片无法显示
 
 **原因：**
-- 图片路径包含 `/xingcheng.github.io` 前缀
+- 图片路径包含 `/ge25nab.github.io` 前缀
 - 图片文件未正确上传
 
 **解决方法：**
@@ -166,6 +166,6 @@ npm run build:custom    # 仅构建自定义域名版本
 
 **注意：**
 - 自定义域名构建：`basePath = ''` （空字符串）
-- GitHub Pages 构建：`basePath = '/xingcheng.github.io'`
+- GitHub Pages 构建：`basePath = '/ge25nab.github.io'`
 - 默认配置已适配自定义域名 `xingcheng-zhou.com`
 

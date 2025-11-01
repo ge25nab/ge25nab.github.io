@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 // Configuration for basePath
 // - Default: Use custom domain (empty basePath) for xingcheng-zhou.com
-// - If GITHUB_PAGES=true and no CUSTOM_DOMAIN: Use GitHub Pages subpath (/xingcheng.github.io)
+// - If GITHUB_PAGES=true and no CUSTOM_DOMAIN: Use GitHub Pages subpath (/ge25nab.github.io)
 const isGitHubPages = process.env.GITHUB_PAGES === 'true';
 const hasCustomDomain = !!process.env.CUSTOM_DOMAIN;
 const customDomain = process.env.CUSTOM_DOMAIN || 'xingcheng-zhou.com';
-const basePath = (isGitHubPages && !hasCustomDomain) ? '/xingcheng.github.io' : '';
+const basePath = (isGitHubPages && !hasCustomDomain) ? '/ge25nab.github.io' : '';
 
 // Log build configuration
 console.log('\n\uD83D\uDCE6 Build Configuration:');
