@@ -33,8 +33,8 @@ jobs:
         NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io' }}
         GITHUB_PAGES: 'true'
       
-    - name: Build
-      run: npm run build
+    - name: Build for GitHub Pages
+      run: npm run build:gh-pages
       env:
         NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io' }}
         GITHUB_PAGES: 'true'

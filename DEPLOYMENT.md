@@ -1,5 +1,37 @@
 # 部署说明 Deployment Guide
 
+## 双域名部署说明
+
+此项目支持同时部署到两个域名：
+- **GitHub Pages**: `https://ge25nab.github.io/xingcheng.github.io/`
+- **自定义域名**: `https://xingcheng-zhou.com/`
+
+## 快速构建
+
+### 构建所有版本（推荐）
+
+同时构建 GitHub Pages 和自定义域名版本：
+
+```bash
+npm run build:all
+```
+
+这会生成两个目录：
+- `out-gh-pages/` - GitHub Pages 版本（basePath: '/xingcheng.github.io'）
+- `out-custom-domain/` - 自定义域名版本（basePath: ''）
+
+### 单独构建
+
+**构建 GitHub Pages 版本：**
+```bash
+npm run build:gh-pages
+```
+
+**构建自定义域名版本：**
+```bash
+npm run build:custom
+```
+
 ## 问题排查 Checklist
 
 如果自定义域名 `xingcheng-zhou.com` 上的 layout 显示错误，请检查以下内容：
@@ -36,18 +68,32 @@ GITHUB_PAGES=true npm run build
 
 1. **重新构建（使用自定义域名配置）：**
    ```bash
-   npm run build
+   npm run build:custom
+   # 或者
+   npm run build:all  # 构建所有版本
    ```
 
 2. **检查构建输出：**
-   - 确认 `out/` 目录中的文件路径正确
-   - CSS 路径：`/_next/static/css/...`
-   - JS 路径：`/_next/static/chunks/...`
-   - 图片路径：`/assets/img/...`
+   - 确认 `out/` 或 `out-custom-domain/` 目录中的文件路径正确
+   - CSS 路径：`/_next/static/css/...`（无前缀）
+   - JS 路径：`/_next/static/chunks/...`（无前缀）
+   - 图片路径：`/assets/img/...`（无前缀）
 
 3. **部署到服务器：**
-   - 将 `out/` 目录的所有内容上传到您的服务器根目录
+   - 将 `out/` 或 `out-custom-domain/` 目录的所有内容上传到您的服务器根目录
    - 确保所有文件都已正确上传
+
+#### 对于 GitHub Pages (ge25nab.github.io/xingcheng.github.io)：
+
+1. **构建（通过 GitHub Actions 自动构建）：**
+   - GitHub Actions 会自动构建并部署
+   - 或者手动构建：`npm run build:gh-pages`
+
+2. **检查构建输出：**
+   - 确认 `out/` 或 `out-gh-pages/` 目录中的文件路径正确
+   - CSS 路径：`/xingcheng.github.io/_next/static/css/...`（有前缀）
+   - JS 路径：`/xingcheng.github.io/_next/static/chunks/...`（有前缀）
+   - 图片路径：`/xingcheng.github.io/assets/img/...`（有前缀）
 
 4. **清除缓存：**
    - 清除浏览器缓存（Ctrl+Shift+R 或 Cmd+Shift+R）
@@ -99,14 +145,21 @@ GITHUB_PAGES=true npm run build
 如果需要快速重新构建和部署：
 
 ```bash
-# 1. 确保使用自定义域名配置构建
-npm run build
+# 1. 构建所有版本（推荐）
+npm run build:all
 
 # 2. 检查构建结果
-ls -la out/
+ls -la out-gh-pages/     # GitHub Pages 版本
+ls -la out-custom-domain/ # 自定义域名版本
 
-# 3. 将 out/ 目录内容部署到服务器
+# 3. 部署到服务器
+# GitHub Pages: GitHub Actions 会自动部署 out-gh-pages/
+# 自定义域名: 将 out-custom-domain/ 目录内容部署到服务器
 # （使用您的部署工具，如 rsync, scp, ftp 等）
+
+# 或者单独构建：
+npm run build:gh-pages  # 仅构建 GitHub Pages 版本
+npm run build:custom    # 仅构建自定义域名版本
 ```
 
 ---

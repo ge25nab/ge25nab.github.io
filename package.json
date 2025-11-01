@@ -5,6 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "npm run generate:feeds && next build",
+    "build:gh-pages": "GITHUB_PAGES=true npm run build",
+    "build:custom": "GITHUB_PAGES= npm run build",
+    "build:all": "node scripts/build-all.js",
     "start": "next start",
     "lint": "next lint",
     "generate:feeds": "tsx scripts/generate-rss.ts && tsx scripts/generate-sitemap.ts",
