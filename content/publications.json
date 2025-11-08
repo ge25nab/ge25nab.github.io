@@ -16,7 +16,7 @@
     "title": "OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model",
     "authors": ["Xingcheng Zhou", "Xuyuan Han", "Feng Yang", "Yunpu Ma", "Alois C Knoll"],
     "year": 2025,
-    "venue": "arXiv",
+    "venue": "AAAI",
     "links": {
       "Paper": "https://arxiv.org/abs/2503.23463",
       "Code": "https://github.com/DriveVLA/OpenDriveVLA",
