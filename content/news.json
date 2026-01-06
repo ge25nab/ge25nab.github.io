@@ -1,5 +1,15 @@
 [
   {
+    "date": "Jan 2026",
+    "content": "I will be heading to Singapore 20th-24th January for AAAI 2026! Feel free to reach out and catch up!",
+    "links": [
+      {
+        "text": "AAAI 2026",
+        "url": "https://aaai.org/aaai-conference/"
+      }
+    ]
+  },
+  {
     "date": "Nov 2025",
     "content": "One paper accepted by AAAI 2026 in Singapore!",
     "links": [
