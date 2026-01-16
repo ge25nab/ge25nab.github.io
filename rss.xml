@@ -6,7 +6,7 @@
     <description><![CDATA[Xingcheng Zhou's Personal Website]]></description>
     <language>en-us</language>
     <atom:link href="https://ge25nab.github.io/xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Tue, 06 Jan 2026 12:20:37 GMT</lastBuildDate>
+    <lastBuildDate>Fri, 16 Jan 2026 21:53:38 GMT</lastBuildDate>
     <item>
         <title><![CDATA[TUMTraffic VideoQA: A Benchmark for Unified Spatio-Temporal Video Understanding in Traffic Scenes]]></title>
         <link>https://traffix-videoqa.github.io/</link>
@@ -27,6 +27,13 @@
         <guid>https://ieeexplore.ieee.org/document/10531702</guid>
         <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
         <description><![CDATA[Xingcheng Zhou, Mingyu Liu, Ekim Yurtsever, Bare Luka Zagar, Walter Zimmer, Hu Cao, Alois C Knoll - T-IV, 2024]]></description>
+      </item>
+    <item>
+        <title><![CDATA[TUMTraf V2X Cooperative Perception Dataset]]></title>
+        <link>https://arxiv.org/pdf/2403.01316</link>
+        <guid>https://arxiv.org/pdf/2403.01316</guid>
+        <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
+        <description><![CDATA[Walter Zimmer, Gerhard Wardana, Suren Sritharan, Xingcheng Zhou, Rui Song, Alois C. Knoll - CVPR, 2024]]></description>
       </item>
     <item>
         <title><![CDATA[WARM-3D: A Weakly-Supervised Sim2Real Domain Adaptation Framework for Roadside Monocular 3D Object Detection]]></title>
