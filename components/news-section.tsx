@@ -49,19 +49,22 @@ export function NewsSection() {
       <h2 className="mb-4 text-2xl font-bold">
         News
       </h2>
-      <div className="overflow-x-auto">
-        <table className="w-full border-collapse">
-          <tbody>
-            {newsItems.map((item, index) => (
-              <tr key={index} className="border-b">
-                <td className="py-2 pr-8 font-medium align-top min-w-[120px]">
-                  {item.date}
-                </td>
-                <td className="py-2">{renderContent(item)}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
+      <div className="overflow-x-auto scrollbar-hide -mx-4 px-4">
+        <div className="flex gap-4 pb-4">
+          {newsItems.map((item, index) => (
+            <div
+              key={index}
+              className="flex-shrink-0 w-80 bg-card border border-border rounded-lg p-4 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="text-sm font-semibold text-muted-foreground mb-2">
+                {item.date}
+              </div>
+              <div className="text-sm leading-relaxed">
+                {renderContent(item)}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   )

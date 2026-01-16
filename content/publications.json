@@ -35,6 +35,18 @@
       "Github": "https://github.com/ge25nab/Awesome-VLM-AD-ITS"
     },
     "image": "/assets/img/publications/vlmsurvey.jpg"
+  },  
+  {
+    "id": "TUMTrafV2X",
+    "title": "TUMTraf V2X Cooperative Perception Dataset",
+    "authors": ["Walter Zimmer", "Gerhard Wardana", "Suren Sritharan", "Xingcheng Zhou", "Rui Song", "Alois C. Knoll"],
+    "year": 2024,
+    "venue": "CVPR",
+    "links": {
+      "Paper": "https://arxiv.org/pdf/2403.01316",
+      "Project": "https://tum-traffic-dataset.github.io/tumtraf-v2x"
+    },
+    "image": "/assets/img/publications/tumtraf-v2x.png"
   },
   {
     "id": "warm-3d",
