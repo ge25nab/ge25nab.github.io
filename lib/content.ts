@@ -120,6 +120,7 @@ export interface NationalProject {
   links: Array<{ label: string; url: string }>
   image?: string
   website?: string
+  websiteLabel?: string
 }
 
 export function getSiteConfig(): SiteConfig {

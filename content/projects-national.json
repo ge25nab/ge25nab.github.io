@@ -19,7 +19,8 @@
       { "label": "Live stream", "url": "https://testfeld-a9.live/kreuzung" }
     ],
     "image": "/assets/img/projects/providentia.png",
-    "website": "https://innovation-mobility.com/en/"
+    "website": "https://innovation-mobility.com/en/project-providentia/a9-dataset/",
+    "websiteLabel": "TUMTraffic Dataset"
   }
 ]
 

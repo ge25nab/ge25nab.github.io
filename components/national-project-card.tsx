@@ -74,7 +74,7 @@ export function NationalProjectCard({ project }: NationalProjectCardProps) {
                     rel="noopener noreferrer"
                     className="inline-flex items-center gap-1"
                   >
-                    Website
+                    {project.websiteLabel || 'Website'}
                     <ExternalLink className="h-3 w-3" />
                   </Link>
                 </Button>

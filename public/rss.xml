@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title><![CDATA[Xingcheng Zhou | TUM]]></title>
+    <title><![CDATA[Xingcheng Zhou's Personal Website]]></title>
     <link>https://ge25nab.github.io/xingcheng.github.io</link>
-    <description><![CDATA[Vision Language Action research for autonomous driving and intelligent infrastructure]]></description>
+    <description><![CDATA[Xingcheng Zhou's Personal Website]]></description>
     <language>en-us</language>
     <atom:link href="https://ge25nab.github.io/xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Sat, 01 Nov 2025 20:44:03 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 16 Mar 2026 10:29:43 GMT</lastBuildDate>
     <item>
         <title><![CDATA[TUMTraffic VideoQA: A Benchmark for Unified Spatio-Temporal Video Understanding in Traffic Scenes]]></title>
         <link>https://traffix-videoqa.github.io/</link>
         <guid>https://traffix-videoqa.github.io/</guid>
         <pubDate>Tue, 31 Dec 2024 23:00:00 GMT</pubDate>
-        <description><![CDATA[Xingcheng Zhou, Konstantinos Larintzakis, Hao Guo, Walter Zimmer, Mingyu Liu, Hu Cao, Jiajie Zhang, Venkatnarayanan Lakshminarasimhan, Leah Strand, Alois C Knoll - ICML Poster, 2025]]></description>
+        <description><![CDATA[Xingcheng Zhou, Konstantinos Larintzakis, Hao Guo, Walter Zimmer, Mingyu Liu, Hu Cao, Jiajie Zhang, Venkatnarayanan Lakshminarasimhan, Leah Strand, Alois C Knoll - ICML-2025 Main Track, 2025]]></description>
       </item>
     <item>
         <title><![CDATA[OpenDriveVLA: Towards End-to-end Autonomous Driving with Large Vision Language Action Model]]></title>
         <link>https://arxiv.org/abs/2503.23463</link>
         <guid>https://arxiv.org/abs/2503.23463</guid>
         <pubDate>Tue, 31 Dec 2024 23:00:00 GMT</pubDate>
-        <description><![CDATA[Xingcheng Zhou, Xuyuan Han, Feng Yang, Yunpu Ma, Alois C Knoll - arXiv, 2025]]></description>
+        <description><![CDATA[Xingcheng Zhou, Xuyuan Han, Feng Yang, Yunpu Ma, Alois C Knoll - AAAI-2026 Main Track, 2025]]></description>
       </item>
     <item>
         <title><![CDATA[Vision Language Models in Autonomous Driving: A Survey and Outlook]]></title>
@@ -27,6 +27,13 @@
         <guid>https://ieeexplore.ieee.org/document/10531702</guid>
         <pubDate>Sun, 31 Dec 2023 23:00:00 GMT</pubDate>
         <description><![CDATA[Xingcheng Zhou, Mingyu Liu, Ekim Yurtsever, Bare Luka Zagar, Walter Zimmer, Hu Cao, Alois C Knoll - T-IV, 2024]]></description>
+      </item>
+    <item>
+        <title><![CDATA[TUMTraf V2X Cooperative Perception Dataset]]></title>
+        <link>https://arxiv.org/pdf/2403.01316</link>
+        <guid>https://arxiv.org/pdf/2403.01316</guid>
+        <pubDate>Sun, 31 Dec 2023 23:00:00 GMT</pubDate>
+        <description><![CDATA[Walter Zimmer, Gerhard Wardana, Suren Sritharan, Xingcheng Zhou, Rui Song, Alois C. Knoll - CVPR, 2024]]></description>
       </item>
     <item>
         <title><![CDATA[WARM-3D: A Weakly-Supervised Sim2Real Domain Adaptation Framework for Roadside Monocular 3D Object Detection]]></title>
