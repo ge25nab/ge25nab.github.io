@@ -25,6 +25,17 @@
     "image": "/assets/img/publications/opendrivevla.jpg"
   },
   {
+    "id": "cctvbench",
+    "title": "CCTVBench: Contrastive Consistency Traffic VideoQA Benchmark for Multimodal LLMs",
+    "authors": ["Xingcheng Zhou", "Hao Guo", "Rui Song", "Walter Zimmer", "Mingyu Liu", "André Schamschurko", "Hu Cao", "Alois C Knoll"],
+    "year": 2026,
+    "venue": "ACL Findings",
+    "links": {
+      "Paper": "https://arxiv.org/pdf/2604.20460"
+    },
+    "image": "/assets/img/publications/trafficbench.jpg"
+  },
+  {
     "id": "vlm-survey",
     "title": "Vision Language Models in Autonomous Driving: A Survey and Outlook",
     "authors": ["Xingcheng Zhou", "Mingyu Liu", "Ekim Yurtsever", "Bare Luka Zagar", "Walter Zimmer", "Hu Cao", "Alois C Knoll"],
@@ -51,7 +62,7 @@
   {
     "id": "warm-3d",
     "title": "WARM-3D: A Weakly-Supervised Sim2Real Domain Adaptation Framework for Roadside Monocular 3D Object Detection",
-    "authors": ["Xingcheng Zhou*", "Deyu Fu*", "Walter Zimmer", "Hao Guo", "Hu Cao", "Alois C Knoll"],
+    "authors": ["Xingcheng Zhou", "Deyu Fu", "Walter Zimmer", "Mingyu Liu", "Venkatnarayanan Lakshminarasimhan", "Leah Strand", "Alois C. Knoll"],
     "year": 2024,
     "venue": "ITSC",
     "links": {
