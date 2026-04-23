@@ -6,7 +6,7 @@
     <description><![CDATA[Xingcheng Zhou's Personal Website]]></description>
     <language>en-us</language>
     <atom:link href="https://ge25nab.github.io/xingcheng.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <lastBuildDate>Mon, 16 Mar 2026 10:36:38 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 23 Apr 2026 14:31:50 GMT</lastBuildDate>
     <item>
         <title><![CDATA[TUMTraffic VideoQA: A Benchmark for Unified Spatio-Temporal Video Understanding in Traffic Scenes]]></title>
         <link>https://traffix-videoqa.github.io/</link>
@@ -20,6 +20,13 @@
         <guid>https://arxiv.org/abs/2503.23463</guid>
         <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
         <description><![CDATA[Xingcheng Zhou, Xuyuan Han, Feng Yang, Yunpu Ma, Alois C Knoll - AAAI-2026 Main Track, 2025]]></description>
+      </item>
+    <item>
+        <title><![CDATA[CCTVBench: Contrastive Consistency Traffic VideoQA Benchmark for Multimodal LLMs]]></title>
+        <link>https://arxiv.org/pdf/2604.20460</link>
+        <guid>https://arxiv.org/pdf/2604.20460</guid>
+        <pubDate>Thu, 01 Jan 2026 00:00:00 GMT</pubDate>
+        <description><![CDATA[Xingcheng Zhou, Hao Guo, Rui Song, Walter Zimmer, Mingyu Liu, André Schamschurko, Hu Cao, Alois C Knoll - ACL Findings, 2026]]></description>
       </item>
     <item>
         <title><![CDATA[Vision Language Models in Autonomous Driving: A Survey and Outlook]]></title>
@@ -40,7 +47,7 @@
         <link>https://ieeexplore.ieee.org/document/10919929</link>
         <guid>https://ieeexplore.ieee.org/document/10919929</guid>
         <pubDate>Mon, 01 Jan 2024 00:00:00 GMT</pubDate>
-        <description><![CDATA[Xingcheng Zhou*, Deyu Fu*, Walter Zimmer, Hao Guo, Hu Cao, Alois C Knoll - ITSC, 2024]]></description>
+        <description><![CDATA[Xingcheng Zhou, Deyu Fu, Walter Zimmer, Mingyu Liu, Venkatnarayanan Lakshminarasimhan, Leah Strand, Alois C. Knoll - ITSC, 2024]]></description>
       </item>
   </channel>
 </rss>
