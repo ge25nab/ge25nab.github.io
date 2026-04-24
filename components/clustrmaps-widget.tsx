@@ -1,102 +1,51 @@
-'use client'
-
-import { useEffect } from 'react'
+import Script from 'next/script'
 import { siteConfig } from '@/lib/config'
 
 /**
- * ClustrMaps global widget: same as
- * <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=..."></script>
- * (`d` is in content/config.json → clustrmaps.globeSiteId)
+ * ClustrMaps widget using the current official body-script embed code.
+ * A static image fallback is kept for users who block or disable JavaScript.
  */
 export function ClustrMapsWidget() {
-  useEffect(() => {
-    const siteId = siteConfig.clustrmaps?.globeSiteId
-    if (!siteId) {
-      console.warn('ClustrMaps: clustrmaps.globeSiteId missing in config.json')
-      return
-    }
+  const siteId = siteConfig.clustrmaps?.globeSiteId
 
-    // Dynamically load ClustrMaps script
-    const scriptId = 'clstr_globe'
-    
-    // Check if script already exists
-    if (document.getElementById(scriptId)) {
-      return
-    }
+  if (!siteId) {
+    return null
+  }
 
-    // Ensure container exists
-    const container = document.getElementById('clustrmaps-container')
-    if (!container) {
-      console.warn('ClustrMaps container not found')
-      return
-    }
-
-    // Clear loading message
-    container.innerHTML = ''
-
-    const script = document.createElement('script')
-    script.type = 'text/javascript'
-    script.id = scriptId
-    // ClustrMaps globe script with your Site ID - use https protocol
-    script.src = `https://clustrmaps.com/globe.js?d=${siteId}`
-    script.async = true
-    script.defer = true
-
-    // Handle script load events
-    script.onload = () => {
-      // Script loaded successfully
-      console.log('ClustrMaps globe.js loaded')
-      // Wait for iframe to be created and ensure it scales correctly
-      const checkForIframe = () => {
-        const iframe = container.querySelector('iframe')
-        if (iframe) {
-          iframe.style.width = '100%'
-          iframe.style.height = '100%'
-          iframe.style.border = 'none'
-        } else {
-          // Retry after a short delay if iframe not found yet
-          setTimeout(checkForIframe, 100)
-        }
-      }
-      checkForIframe()
-    }
-    
-    script.onerror = () => {
-      console.error('Failed to load ClustrMaps globe.js')
-      // Show error message if script fails to load
-      if (container) {
-        container.innerHTML = '<div class="text-sm text-muted-foreground text-center py-4">Failed to load visitor map. Please refresh the page.</div>'
-      }
-    }
-
-    // Append script to container so globe renders inside it
-    // ClustrMaps globe.js will create the iframe/div at the script location
-    container.appendChild(script)
-
-    return () => {
-      // Cleanup on unmount
-      const existingScript = document.getElementById(scriptId)
-      if (existingScript && existingScript.parentNode) {
-        existingScript.parentNode.removeChild(existingScript)
-      }
-    }
-  }, [])
+  const scriptSrc = `https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=${siteId}`
+  const fallbackMapSrc = `https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=${siteId}`
 
   return (
     <div className="mt-8 border-t pt-8 pb-8">
       <div className="text-center space-y-4">
         <h3 className="text-lg font-semibold mb-4">Visitor Statistics</h3>
-        
-        {/* ClustrMaps container */}
-        <div 
-          id="clustrmaps-container" 
-          className="w-full max-w-[144px] mx-auto h-[192px] bg-muted/30 rounded-lg overflow-hidden flex items-center justify-center"
-        >
-          {/* ClustrMaps map will be injected here by the script */}
-          <div className="text-sm text-muted-foreground text-center py-4">Loading visitor map...</div>
+
+        <div className="mx-auto flex w-full max-w-[300px] justify-center overflow-hidden rounded-lg border bg-muted/30 p-2">
+          <Script
+            id="clustrmaps"
+            src={scriptSrc}
+            strategy="afterInteractive"
+          />
+
+          <noscript>
+            <a
+              href="https://clustrmaps.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="View visitor statistics on ClustrMaps"
+            >
+              <img
+                src={fallbackMapSrc}
+                alt="Visitor location map"
+                width={300}
+                height={188}
+                loading="lazy"
+                className="h-auto w-full rounded-md"
+              />
+            </a>
+          </noscript>
         </div>
 
-        {/* Visitor map powered by ClustrMaps */}
         <div className="mt-4 text-xs text-muted-foreground">
           <p>
             Visitor location map powered by{' '}
@@ -114,4 +63,3 @@ export function ClustrMapsWidget() {
     </div>
   )
 }
-
