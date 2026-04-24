@@ -1,16 +1,20 @@
 'use client'
 
 import { useEffect } from 'react'
+import { siteConfig } from '@/lib/config'
 
 /**
- * ClustrMaps Visitor Map Widget
- * 
- * Client component for loading ClustrMaps visitor map
+ * ClustrMaps global widget: same as
+ * <script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=..."></script>
+ * (`d` is in content/config.json → clustrmaps.globeSiteId)
  */
 export function ClustrMapsWidget() {
   useEffect(() => {
-    // ClustrMaps Site ID
-    const siteId = '0z6rM8EvlBeylymKmr4PTVB4GhLbl_qNPKISkqFFJGg'
+    const siteId = siteConfig.clustrmaps?.globeSiteId
+    if (!siteId) {
+      console.warn('ClustrMaps: clustrmaps.globeSiteId missing in config.json')
+      return
+    }
 
     // Dynamically load ClustrMaps script
     const scriptId = 'clstr_globe'

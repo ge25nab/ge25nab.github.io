@@ -38,4 +38,7 @@ export const siteConfig = configData as {
       siemens?: string
     }
   }
+  clustrmaps?: {
+    globeSiteId: string
+  }
 }

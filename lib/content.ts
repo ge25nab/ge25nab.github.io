@@ -38,6 +38,10 @@ export interface SiteConfig {
       siemens?: string
     }
   }
+  clustrmaps?: {
+    /** `d` query value for //clustrmaps.com/globe.js?d=... (global widget) */
+    globeSiteId: string
+  }
 }
 
 export interface Publication {
