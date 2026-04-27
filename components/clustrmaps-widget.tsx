@@ -11,16 +11,13 @@ import { siteConfig } from '@/lib/config'
 export function ClustrMapsWidget() {
   const siteId = siteConfig.clustrmaps?.globeSiteId
 
-  if (!siteId) {
-    return null
-  }
-
   const scriptId = 'clstr_globe'
   const containerId = 'clustrmaps-container'
-  const scriptSrc = `https://clustrmaps.com/globe.js?d=${siteId}`
-  const fallbackMapSrc = `https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=${siteId}`
+  const scriptSrc = siteId ? `https://clustrmaps.com/globe.js?d=${siteId}` : ''
+  const fallbackMapSrc = siteId ? `https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=${siteId}` : ''
 
   useEffect(() => {
+    if (!siteId) return
     const container = document.getElementById(containerId)
     if (!container) return
 
@@ -43,6 +40,8 @@ export function ClustrMapsWidget() {
       }
     }
   }, [scriptSrc])
+
+  if (!siteId) return null
 
   return (
     <div className="mt-8 border-t pt-8 pb-8">
