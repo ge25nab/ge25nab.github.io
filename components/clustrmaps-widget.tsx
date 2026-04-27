@@ -1,9 +1,12 @@
-import Script from 'next/script'
+'use client'
+
+import { useEffect } from 'react'
 import { siteConfig } from '@/lib/config'
 
 /**
- * ClustrMaps widget using the current official body-script embed code.
- * A static image fallback is kept for users who block or disable JavaScript.
+ * ClustrMaps globe widget.
+ * We inject the script into a dedicated container because ClustrMaps renders
+ * the iframe at the script insertion point.
  */
 export function ClustrMapsWidget() {
   const siteId = siteConfig.clustrmaps?.globeSiteId
@@ -12,8 +15,34 @@ export function ClustrMapsWidget() {
     return null
   }
 
-  const scriptSrc = `https://cdn.clustrmaps.com/map_v2.js?cl=ffffff&w=300&t=n&d=${siteId}`
+  const scriptId = 'clstr_globe'
+  const containerId = 'clustrmaps-container'
+  const scriptSrc = `https://clustrmaps.com/globe.js?d=${siteId}`
   const fallbackMapSrc = `https://clustrmaps.com/map_v2.png?cl=ffffff&w=300&t=n&d=${siteId}`
+
+  useEffect(() => {
+    const container = document.getElementById(containerId)
+    if (!container) return
+
+    if (document.getElementById(scriptId)) return
+
+    container.innerHTML = ''
+
+    const script = document.createElement('script')
+    script.id = scriptId
+    script.type = 'text/javascript'
+    script.src = scriptSrc
+    script.async = true
+    script.defer = true
+    container.appendChild(script)
+
+    return () => {
+      const existingScript = document.getElementById(scriptId)
+      if (existingScript?.parentNode) {
+        existingScript.parentNode.removeChild(existingScript)
+      }
+    }
+  }, [scriptSrc])
 
   return (
     <div className="mt-8 border-t pt-8 pb-8">
@@ -21,11 +50,12 @@ export function ClustrMapsWidget() {
         <h3 className="text-lg font-semibold mb-4">Visitor Statistics</h3>
 
         <div className="mx-auto flex w-full max-w-[300px] justify-center overflow-hidden rounded-lg border bg-muted/30 p-2">
-          <Script
-            id="clustrmaps"
-            src={scriptSrc}
-            strategy="afterInteractive"
-          />
+          <div
+            id={containerId}
+            className="flex min-h-[188px] w-full items-center justify-center"
+          >
+            <span className="text-xs text-muted-foreground">Loading visitor map...</span>
+          </div>
 
           <noscript>
             <a
