@@ -30,13 +30,13 @@ jobs:
     - name: Generate feeds
       run: npm run generate:feeds
       env:
-        NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io' }}
+        NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://xingcheng-zhou.com' }}
         GITHUB_PAGES: 'true'
-      
+
     - name: Build for GitHub Pages
       run: npm run build:gh-pages
       env:
-        NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io' }}
+        NEXT_PUBLIC_BASE_URL: ${{ secrets.BASE_URL || 'https://xingcheng-zhou.com' }}
         GITHUB_PAGES: 'true'
     
     - name: Ensure .nojekyll exists
@@ -48,4 +48,5 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./out
+        cname: xingcheng-zhou.com
 
