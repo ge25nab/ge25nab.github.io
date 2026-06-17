@@ -5,6 +5,7 @@ import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navigation } from '@/components/navigation'
 import { Footer } from '@/components/footer'
+import { AnalyticsTracker } from '@/components/analytics-tracker'
 import { assetPath } from '@/lib/utils'
 import { getSiteConfig } from '@/lib/content'
 
@@ -59,6 +60,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <AnalyticsTracker />
           <div className="flex min-h-screen flex-col">
             <Navigation />
             <main className="flex-1">{children}</main>
