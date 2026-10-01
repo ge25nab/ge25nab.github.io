@@ -1,14 +1,10 @@
-import { getSiteConfig } from './content'
-
 export function generateSitemap() {
-  const config = getSiteConfig()
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io'
+  const baseUrl = (process.env.NEXT_PUBLIC_BASE_URL || 'https://xingcheng-zhou.com').replace(/\/$/, '')
 
   const pages = [
-    '',
-    '/publications',
-    '/national-projects',
-    '/academic-service',
+    '/',
+    '/national-projects/',
+    '/academic-service/',
   ]
 
   const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
@@ -19,7 +15,7 @@ ${pages
         <loc>${baseUrl}${page}</loc>
         <lastmod>${new Date().toISOString()}</lastmod>
         <changefreq>weekly</changefreq>
-        <priority>${page === '' ? '1.0' : '0.8'}</priority>
+        <priority>${page === '/' ? '1.0' : '0.8'}</priority>
       </url>`
       )
   .join('\n')}
@@ -27,4 +23,3 @@ ${pages
 
   return sitemap
 }
-

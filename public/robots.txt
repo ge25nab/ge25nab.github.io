@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://xingcheng-zhou.com/sitemap.xml

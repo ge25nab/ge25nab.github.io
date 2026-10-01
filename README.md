@@ -4,7 +4,7 @@ A fast, production-ready academic personal website built with Next.js, TypeScrip
 
 ## Features
 
-- **Fast Performance**: Built with Next.js 14 App Router for optimal performance
+- **Fast Performance**: Built with Next.js 16 App Router for optimal performance
 - **TypeScript**: Full type safety throughout the codebase
 - **Tailwind CSS**: Modern styling with TUM blue theme
 - **Dark Mode**: System-aware dark mode support
@@ -14,7 +14,7 @@ A fast, production-ready academic personal website built with Next.js, TypeScrip
 
 ## Tech Stack
 
-- **Framework**: Next.js 14 with App Router
+- **Framework**: Next.js 16 with App Router
 - **Language**: TypeScript
 - **Styling**: Tailwind CSS
 - **UI Components**: Custom components with Radix UI primitives
@@ -25,7 +25,7 @@ A fast, production-ready academic personal website built with Next.js, TypeScrip
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 20+
 - npm or yarn
 
 ### Installation
@@ -156,7 +156,8 @@ The website is configured for automatic deployment to GitHub Pages.
 
 1. **Enable GitHub Pages**:
    - Go to repository Settings → Pages
-   - Select "GitHub Actions" as source
+   - Select "Deploy from a branch", then `gh-pages` and `/(root)`
+   - Set the custom domain to `xingcheng-zhou.com` and enable HTTPS
 
 2. **Push code**:
    ```bash
@@ -171,7 +172,7 @@ The website is configured for automatic deployment to GitHub Pages.
    - Build static site
    - Deploy to GitHub Pages
 
-4. **Access website**: `https://<username>.github.io/xingcheng.github.io` or `https://xingcheng.github.io` (if repository is named `username.github.io`)
+4. **Access website**: `https://xingcheng-zhou.com/`
 
 #### Method 2: Manual Deployment
 

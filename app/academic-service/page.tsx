@@ -1,5 +1,6 @@
 import { getWorkshops, getServiceReviewer, Workshop } from '@/lib/content'
 import { WorkshopCard } from '@/components/workshop-card'
+import { serializeJsonLd } from '@/lib/json-ld'
 
 export default function AcademicServicePage() {
   const workshops = getWorkshops()
@@ -37,7 +38,7 @@ export default function AcademicServicePage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             '@context': 'https://schema.org',
             '@graph': [
               ...workshops.map((workshop: Workshop) => ({
@@ -68,4 +69,3 @@ export default function AcademicServicePage() {
     </div>
   )
 }
-

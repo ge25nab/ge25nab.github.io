@@ -2,53 +2,62 @@ name: Build and Deploy
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [main, master]
   pull_request:
-    branches: [ main, master ]
+    branches: [main, master]
 
 jobs:
-  build-and-deploy:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build for custom domain
+        run: npm run build:gh-pages
+        env:
+          NEXT_PUBLIC_BASE_URL: https://xingcheng-zhou.com
+          GITHUB_PAGES: 'true'
+          CUSTOM_DOMAIN: xingcheng-zhou.com
+
+      - name: Keep Next.js assets on GitHub Pages
+        run: touch out/.nojekyll
+
+      - name: Upload static site
+        if: github.event_name == 'push'
+        uses: actions/upload-artifact@v4
+        with:
+          name: static-site
+          path: out/
+          include-hidden-files: true
+
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: write
-      pages: write
-      id-token: write
-    
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4
-      
-    - name: Setup Node
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
-        cache: 'npm'
-        
-    - name: Install dependencies
-      run: npm ci
-      
-    - name: Generate feeds
-      run: npm run generate:feeds
-      env:
-        NEXT_PUBLIC_BASE_URL: 'https://xingcheng-zhou.com'
-        GITHUB_PAGES: 'true'
-        CUSTOM_DOMAIN: 'xingcheng-zhou.com'
+      - name: Download static site
+        uses: actions/download-artifact@v4
+        with:
+          name: static-site
+          path: out/
 
-    - name: Build for GitHub Pages
-      run: npm run build:gh-pages
-      env:
-        NEXT_PUBLIC_BASE_URL: 'https://xingcheng-zhou.com'
-        GITHUB_PAGES: 'true'
-        CUSTOM_DOMAIN: 'xingcheng-zhou.com'
-    
-    - name: Ensure .nojekyll exists
-      run: touch out/.nojekyll || echo "" > out/.nojekyll
-        
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./out
-        cname: xingcheng-zhou.com
-
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./out
+          cname: xingcheng-zhou.com

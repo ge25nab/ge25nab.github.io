@@ -4,7 +4,7 @@ import Script from 'next/script'
 import './globals.css'
 import { ThemeProvider } from '@/components/theme-provider'
 import { Navigation } from '@/components/navigation'
-import { Footer } from '@/components/footer'
+import { VisitorTracker } from '@/components/visitor-tracker'
 import { AnalyticsTracker } from '@/components/analytics-tracker'
 import { MouseMascot } from '@/components/mouse-mascot'
 import { assetPath } from '@/lib/utils'
@@ -66,11 +66,10 @@ export default function RootLayout({
           <div className="relative z-10 flex min-h-screen flex-col">
             <Navigation />
             <main className="flex-1">{children}</main>
-            <Footer />
+            <VisitorTracker />
           </div>
         </ThemeProvider>
       </body>
     </html>
   );
 }
-

@@ -1,6 +1,7 @@
 import { getNationalProjects, getNationalProjectsIntro, NationalProject } from '@/lib/content'
 import { NationalProjectCard } from '@/components/national-project-card'
 import Link from 'next/link'
+import { serializeJsonLd } from '@/lib/json-ld'
 
 export function NationalProjectsSection() {
   const projects = getNationalProjects()
@@ -30,7 +31,7 @@ export function NationalProjectsSection() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
+          __html: serializeJsonLd({
             '@context': 'https://schema.org',
             '@graph': projects.map((project: NationalProject) => {
               // Parse timeframe - default to safe values if parsing fails
@@ -65,4 +66,3 @@ export function NationalProjectsSection() {
     </section>
   )
 }
-

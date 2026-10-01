@@ -3,7 +3,7 @@ import { getSiteConfig, getPublications } from './content'
 export function generateRSS() {
   const config = getSiteConfig()
   const publications = getPublications()
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://ge25nab.github.io/xingcheng.github.io'
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://xingcheng-zhou.com'
   const siteUrl = baseUrl
   const siteTitle = config.site.title
   const siteDescription = config.site.description
@@ -54,4 +54,3 @@ ${items}
 
   return rss
 }
-
